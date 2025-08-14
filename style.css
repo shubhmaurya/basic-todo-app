@@ -1,0 +1,367 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  color: #22223b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container card */
+.container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Header */
+.container h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #3a86ff;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.h1 {
+  border-bottom: 3px solid #3a86ff;
+  margin-bottom: 24px;
+}
+
+/* Todo list container */
+.todos-group {
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+  background: #f7faff;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual todo item */
+.todo-item {
+  font-size: 1rem;
+  padding: 12px;
+  color: #22223b;
+  background-color: #e9f5ff;
+  margin: 8px 0;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.todo-item:hover {
+  background: #d0ebff;
+}
+
+/* Edit button */
+.edit-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #3a86ff;
+  transition: color 0.2s;
+}
+
+.edit-btn:hover {
+  color: #ffbe0b;
+}
+
+/* Delete button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: #ef233c;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #d90429;
+}
+
+.todo-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+/* Input and button */
+.input-group {
+  margin-top: 22px;
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #bdbdbd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.2s;
+  background: #f7faff;
+}
+
+input[type="text"]:focus {
+  border-color: #3a86ff;
+  outline: none;
+  box-shadow: 0 0 0 2px #a0c4ff;
+}
+
+#addBtn {
+  padding: 12px 18px;
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+}
+
+#addBtn:hover {
+  background-color: #4361ee;
+  transform: translateY(-2px) scale(1.04);
+}
+
+#addBtn:active {
+  background-color: #3a86ff;
+  transform: translateY(0) scale(1);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #232526 0%, #393e46 100%);
+  color: #e0eafc;
+}
+
+body.dark-mode .container {
+  background-color: #23243a;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.35);
+}
+
+body.dark-mode .todos-group {
+  background: #23243a;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.18);
+}
+
+body.dark-mode .todo-item {
+  background-color: #2d3142;
+  color: #e0eafc;
+}
+
+body.dark-mode .todo-item:hover {
+  background: #393e46;
+}
+
+body.dark-mode input[type="text"] {
+  background: #23243a;
+  color: #e0eafc;
+  border-color: #393e46;
+}
+
+body.dark-mode input[type="text"]:focus {
+  border-color: #3a86ff;
+  box-shadow: 0 0 0 2px #3a86ff44;
+}
+
+body.dark-mode #addBtn {
+  background-color: #3a86ff;
+  color: #fff;
+}
+
+body.dark-mode #addBtn:hover {
+  background-color: #4361ee;
+}
+
+body.dark-mode .edit-btn {
+  color: #ffd166;
+}
+
+body.dark-mode .edit-btn:hover {
+  color: #ffbe0b;
+}
+
+body.dark-mode .delete-btn {
+  color: #ef476f;
+}
+
+body.dark-mode .delete-btn:hover {
+  color: #d90429;
+}
+
+/* -------------------- */
+/* Responsive styles start here */
+/* -------------------- */
+
+/* Mobile devices (up to 600px) */
+@media (max-width: 600px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    padding: 16px 4vw;
+    border-radius: 10px;
+    max-width: 100vw;
+    width: 100vw;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+    margin: 0 10px; /* Added margin for left and right */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container h1 {
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+  }
+  .h1 {
+    margin-bottom: 10px;
+    border-bottom-width: 2px;
+  }
+  .todos-group {
+    max-height: 180px;
+    padding: 4px;
+  }
+  .todo-item {
+    font-size: 0.9rem;
+    padding: 6px;
+    gap: 4px;
+    margin: 6px 0;
+  }
+  .input-group {
+    margin-top: 10px;
+    gap: 4px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  input[type="text"] {
+    padding: 7px 8px;
+    font-size: 0.9rem;
+    border-radius: 7px;
+    margin-bottom: 6px;
+  }
+  #addBtn {
+    padding: 9px 0;
+    font-size: 0.95rem;
+    border-radius: 7px;
+    width: 100%;
+  }
+  #darkModeBtn {
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    padding: 7px 12px !important;
+    font-size: 0.95rem !important;
+    border-radius: 7px !important;
+    z-index: 1000 !important;
+  }
+}
+
+/* Tablets (601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .container {
+    padding: 32px 18px;
+    border-radius: 16px;
+    max-width: 80vw;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .todos-group {
+    max-height: 260px;
+    padding: 8px;
+  }
+  .todo-item {
+    font-size: 1rem;
+    padding: 10px;
+    gap: 8px;
+  }
+  .input-group {
+    margin-top: 18px;
+    gap: 8px;
+  }
+  input[type="text"] {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 9px;
+  }
+  #addBtn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 9px;
+  }
+}
+
+/* Large screens (above 1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 540px;
+    padding: 48px 40px;
+  }
+  .container h1 {
+    font-size: 2.8rem;
+  }
+  .todos-group {
+    max-height: 400px;
+    padding: 16px;
+  }
+  .todo-item {
+    font-size: 1.1rem;
+    padding: 16px;
+    gap: 14px;
+  }
+  .input-group {
+    margin-top: 32px;
+    gap: 14px;
+  }
+  input[type="text"] {
+    padding: 16px 18px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+  #addBtn {
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+}
+
+/* Ensure dark mode styles remain responsive */
+@media (max-width: 600px) {
+  body.dark-mode .container,
+  body.dark-mode .todos-group,
+  body.dark-mode input[type="text"] {
+    border-radius: 8px;
+  }
+}
