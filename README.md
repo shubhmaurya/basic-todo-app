@@ -1,13 +1,13 @@
 # Todo List Web App
 
-A simple, modern Todo List web app with dark mode. Add, edit, and delete tasks with a clean, responsive UI—built using JavaScript, HTML, and CSS to learn DOM manipulation.
+A simple, modern Todo List web app with dark mode. Add, edit, and delete tasks with a clean, responsive UI - built using JavaScript, HTML, and CSS to learn DOM manipulation.
 
 ## Features
 
 - Add, edit, and delete todos
 - Sequential numbering for todos
 - Responsive design for all devices
-- Dark mode toggle (top right corner)
+- Dark mode toggle
 - Accessible and keyboard-friendly
 
 ## Live Demo
